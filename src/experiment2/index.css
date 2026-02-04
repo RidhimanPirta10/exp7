@@ -1,0 +1,14 @@
+/* Simple, minimal overrides for the experiment */
+:root {
+  --max-width: 1200px;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
