@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -18,9 +19,9 @@ const Navbar = () => {
           Experiment 2 — UI
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Contact</Button>
+          <Button color="inherit" component={RouterLink} to="/">Home</Button>
+          <Button color="inherit" component={RouterLink} to="/projects">Projects</Button>
+          <Button color="inherit" component={RouterLink} to="/contact">Contact</Button>
         </Box>
       </Toolbar>
     </AppBar>
