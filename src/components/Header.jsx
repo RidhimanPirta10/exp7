@@ -13,6 +13,9 @@ const Header = ({ setPage }) => {
           <li>
             <button onClick={() => setPage("about")}>About</button>
           </li>
+          <li>
+            <button onClick={() => setPage("exp3")}>Experiment 3</button>
+          </li>
         </ul>
       </nav>
     </header>
