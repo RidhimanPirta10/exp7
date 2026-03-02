@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// Use Experiment4 App for testing the Experiment 4 features
+// Use Experiment5 App which includes Redux Toolkit and new page
 import App from './experiment4/App';
 import reportWebVitals from './reportWebVitals';
 

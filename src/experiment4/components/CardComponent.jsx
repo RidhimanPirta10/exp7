@@ -1,17 +1,21 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, removeFavorite } from '../redux/slices/favoritesSlice';
 import { useAppContext } from '../context/AppContext';
 
 export default function CardComponent({ item }) {
-  const { state, dispatch } = useAppContext();
-  const isFav = state.favorites.find((f) => f.id === item.id);
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites.items);
+  const isFav = favorites.find((f) => f.id === item.id);
+  const { theme } = useAppContext();
 
   const toggleFav = () => {
-    if (isFav) dispatch({ type: 'REMOVE_FAVORITE', payload: item });
-    else dispatch({ type: 'ADD_FAVORITE', payload: item });
+    if (isFav) dispatch(removeFavorite(item.id));
+    else dispatch(addFavorite(item));
   };
 
   return (
-    <div className="card">
+    <div className="card" data-theme={theme}>
       <h3>{item.title}</h3>
       <p>{item.description}</p>
       <div className="card-actions">

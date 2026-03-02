@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+> This repository contains a sequence of experiments. The current active application is **Experiment 5** located under `src/experiment4` (the folder retains the previous name for continuity). See `src/experiment4/README.md` for detailed instructions, feature list, and screenshots.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,21 +1,7 @@
-export const initialState = {
-  theme: 'light',
-  favorites: [],
-  user: { name: 'Demo User', email: 'demo@example.com' },
-};
+// legacy reducer from Experiment 4; Redux Toolkit now handles favorites, and
+// the Context provider manages theme/user. This file is kept for reference only.
 
-export default function appReducer(state, action) {
-  switch (action.type) {
-    case 'TOGGLE_THEME':
-      return { ...state, theme: state.theme === 'light' ? 'dark' : 'light' };
-    case 'ADD_FAVORITE':
-      if (state.favorites.find((f) => f.id === action.payload.id)) return state;
-      return { ...state, favorites: [...state.favorites, action.payload] };
-    case 'REMOVE_FAVORITE':
-      return { ...state, favorites: state.favorites.filter((f) => f.id !== action.payload.id) };
-    case 'CLEAR_FAVORITES':
-      return { ...state, favorites: [] };
-    default:
-      return state;
-  }
+export const initialState = {};
+export default function appReducer(state = initialState, action) {
+  return state;
 }

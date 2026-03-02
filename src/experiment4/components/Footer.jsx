@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container">© Experiment 4 — Demo project</div>
+      <div className="container">© Experiment 5 — Redux + Context demo</div>
     </footer>
   );
 }

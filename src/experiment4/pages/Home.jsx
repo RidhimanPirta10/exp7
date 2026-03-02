@@ -7,7 +7,7 @@ export default function Home() {
       <HeroSection />
       <section>
         <h3>Overview</h3>
-        <p>This experiment extends the multi-page app and adds global state and analytics.</p>
+        <p>This experiment (now version 5) extends the multi‑page app with Redux Toolkit for state, the Context API for theme/user, and memoized reports.</p>
       </section>
     </main>
   );

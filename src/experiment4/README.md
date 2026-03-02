@@ -1,40 +1,46 @@
-# Experiment 4 — Analytics + Context + Reducer + Memo
+# Experiment 5 — Redux Toolkit + Context + Memo + Extra Page
 
-This folder contains the Experiment 4 extension of the Experiment 3 project. It implements the assignment requirements:
+This folder now contains the Experiment 5 extension built on top of Experiment 4. The app has been refactored to meet the new assignment requirements:
 
-- Global state with `useContext`
-- Structured state updates with `useReducer` (actions: `ADD_FAVORITE`, `REMOVE_FAVORITE`, `CLEAR_FAVORITES`, `TOGGLE_THEME`)
-- Performance optimization using `useMemo` for derived data
-- A new page (`Analytics`) connected with React Router
-- UI improvements and responsive layout
+- **Redux Toolkit** for structured global state (favorites slice with `addFavorite`, `removeFavorite`, `clearFavorites`)
+- **React Context** used for theme toggling and user profile (context provider wraps the entire app)
+- **useMemo** utilised in multiple pages to optimise derived data
+- **Extra page** (`Reports`) added alongside Home / Projects / Analytics
+- Navbar updated to include a Reports link; favorites count now comes from Redux
+- Theme toggle and user greeting demonstrate context usage
+- Clean responsive design carried over from previous experiment
 
-UID and Name (displayed in the app):
+UID and Name displayed in the app:
 
 - UID: **23BAI70112**
 - Name: **Ridhiman Pirta**
 
-Run instructions
+### Run the project
 
-1. From the project root (`myspa1`), install dependencies:
+1. From the project root (`myspa1`), install dependencies (new packages added):
 
 ```bash
 npm install
 ```
 
-2. Start the dev server (Experiment 4 App is mounted by default):
+2. Start the development server:
 
 ```bash
 npm start
 ```
 
-3. Open http://localhost:3000 to view the app. The navbar shows your UID and name and the Analytics page demonstrates `useReducer` + `useMemo` + `useContext`.
+3. Open http://localhost:3000. You should see the Experiment 5 app with routes for Home, Projects, Analytics and Reports. Favorites are managed by Redux; theme and user info come from Context.
 
-Deployment URL format (see Experiment 1 guide):
+### Deployment
+
+Use the same Vercel naming convention as before:
 
 `{uid}-{experiment-part}-{name}.vercel.app`
 
-Example for this project:
+For example:
 
-`23BAI70112-4-ridhiman-pirta.vercel.app`
+`23BAI70112-5-ridhiman-pirta.vercel.app`
 
-Screenshots are included in the `screenshots/` folder (placeholders). Replace them with real screenshots before submission.
+### Screenshots
+
+Screenshots demonstrating the new state management features and the Reports page are stored in the `screenshots/` directory. Add at least 2–3 images before submission; the repository currently contains placeholders.

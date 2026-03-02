@@ -1,18 +1,22 @@
 import React, { useMemo } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearFavorites } from '../redux/slices/favoritesSlice';
 import { useAppContext } from '../context/AppContext';
 
 export default function Analytics() {
-  const { state, dispatch } = useAppContext();
+  const favorites = useSelector((state) => state.favorites.items);
+  const dispatch = useDispatch();
+  const { theme } = useAppContext();
 
   const summary = useMemo(() => {
     return {
-      totalFavorites: state.favorites.length,
-      favoriteTitles: state.favorites.map((f) => f.title),
+      totalFavorites: favorites.length,
+      favoriteTitles: favorites.map((f) => f.title),
     };
-  }, [state.favorites]);
+  }, [favorites]);
 
   return (
-    <main className="container page">
+    <main className={`container page ${theme}`}>
       <h2>Analytics</h2>
       <div className="analytics">
         <div className="metric">Favorites: <strong>{summary.totalFavorites}</strong></div>
@@ -25,7 +29,7 @@ export default function Analytics() {
           )}
         </ul>
         <div className="analytics-actions">
-          <button onClick={() => dispatch({ type: 'CLEAR_FAVORITES' })}>Clear Favorites</button>
+          <button onClick={() => dispatch(clearFavorites())}>Clear Favorites</button>
         </div>
       </div>
     </main>
