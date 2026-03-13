@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className={`nav ${theme}`}>
       <div className="container nav-inner">
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <h1 className="brand">Experiment 5</h1>
+          <h1 className="brand">Lab Mst</h1>
           <div className="uid-badge">
             <strong>{UID}</strong> — {NAME}
           </div>

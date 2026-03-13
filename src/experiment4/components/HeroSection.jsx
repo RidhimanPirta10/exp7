@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="hero container">
       <div className="hero-inner">
         <div>
-          <h2>Welcome to Experiment 5</h2>
+          <h2>Welcome to Lab Mst</h2>
           <p className="lead">Redux Toolkit + Context + useMemo in a scalable multi‑page app.</p>
           <p className="small">
             This update adds a Redux store for favorites, a global theme/user context,

@@ -9,9 +9,10 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Analytics from './pages/Analytics';
 import Reports from './pages/Reports';
+import UsersPage from './pages/UsersPage';
 import './index.css';
 
-export default function Experiment5App() {
+export default function App() {
   return (
     <Provider store={store}>
       <AppProvider>
@@ -23,6 +24,7 @@ export default function Experiment5App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="/users" element={<UsersPage />} />
             </Routes>
             <Footer />
           </div>
