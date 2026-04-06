@@ -1,0 +1,7 @@
+*.zip
+jdk/
+target/
+*.log
+.idea/
+.vscode/
+node_modules/
